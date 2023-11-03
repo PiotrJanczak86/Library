@@ -7,7 +7,7 @@ import lombok.Data;
 import java.time.LocalDate;
 @Data
 @Entity(name = "BOOK_RENTS")
-public class BookRent {
+public class Rent {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "ID")
@@ -36,5 +36,5 @@ public class BookRent {
     @ManyToOne(fetch = FetchType.EAGER)
     @NotNull
     @JoinColumn(name = "BOOK_ID")
-    private BookCopy bookCopy;
+    private Copy bookCopy;
 }

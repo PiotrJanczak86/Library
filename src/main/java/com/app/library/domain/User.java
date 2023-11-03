@@ -27,8 +27,8 @@ public class User {
     @NotNull
     private int accountCreated;
 
-    @OneToMany(targetEntity = BookRent.class,
+    @OneToMany(targetEntity = Rent.class,
     mappedBy = "userId",
     fetch = FetchType.EAGER)
-    private List<BookRent> rents = new ArrayList<>();
+    private List<Rent> rents = new ArrayList<>();
 }

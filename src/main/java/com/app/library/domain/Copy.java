@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Entity(name = "BOOK_COPIES")
-public class BookCopy {
+public class Copy {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
@@ -23,13 +23,13 @@ public class BookCopy {
     @NotNull
     private String status;
 
-    @OneToMany(targetEntity = BookRent.class,
+    @OneToMany(targetEntity = Rent.class,
     mappedBy = "bookCopyId",
     fetch = FetchType.EAGER)
-    private List<BookRent> rents = new ArrayList<>();
+    private List<Rent> rents = new ArrayList<>();
 
     @ManyToOne
     @NotNull
     @JoinColumn(name = "BOOK_TITLE_ID")
-    private BookTitle bookTitle;
+    private Title title;
 }

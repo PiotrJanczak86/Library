@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.time.LocalDate;
 @Data
-public class BookRentDto {
+public class RentDto {
     private int bookId;
     private int userId;
     private LocalDate rentDate;

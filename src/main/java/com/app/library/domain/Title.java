@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Entity(name = "BOOK_TITLE")
-public class BookTitle {
+public class Title {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "ID")
@@ -27,8 +27,8 @@ public class BookTitle {
     @NotNull
     private int publicationYear;
 
-    @OneToMany(targetEntity = BookCopy.class,
+    @OneToMany(targetEntity = Copy.class,
     mappedBy = "titleId",
     fetch = FetchType.EAGER)
-    private List<BookCopy> bookCopies = new ArrayList<>();
+    private List<Copy> bookCopies = new ArrayList<>();
 }
