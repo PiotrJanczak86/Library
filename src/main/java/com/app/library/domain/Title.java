@@ -2,6 +2,7 @@ package com.app.library.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Data
 @Entity(name = "BOOK_TITLE")
+@AllArgsConstructor
 public class Title {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
