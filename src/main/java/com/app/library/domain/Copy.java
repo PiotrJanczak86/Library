@@ -15,10 +15,6 @@ public class Copy {
     @Column(name = "ID")
     private int id;
 
-    @Column(name = "TitleId")
-    @NotNull
-    private int titleId;
-
     @Column(name = "status")
     @NotNull
     private String status;

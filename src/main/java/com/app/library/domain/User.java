@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class User {
 
     @Column(name = "createdOn")
     @NotNull
-    private int accountCreated;
+    private LocalDate accountCreated;
 
     @OneToMany(targetEntity = Rent.class,
     mappedBy = "userId",

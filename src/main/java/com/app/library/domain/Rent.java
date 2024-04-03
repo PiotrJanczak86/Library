@@ -13,14 +13,6 @@ public class Rent {
     @Column(name = "ID")
     private int id;
 
-    @Column(name = "bookId")
-    @NotNull
-    private int bookCopyId;
-
-    @Column(name = "userId")
-    @NotNull
-    private int userId;
-
     @Column(name = "rentDate")
     @NotNull
     private LocalDate rentDate;
