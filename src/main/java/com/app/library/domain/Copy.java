@@ -4,11 +4,13 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "BOOK_COPIES")
 public class Copy {
@@ -22,7 +24,7 @@ public class Copy {
     private String status;
 
     @OneToMany(targetEntity = Rent.class,
-    mappedBy = "bookCopyId",
+    mappedBy = "bookCopy",
     fetch = FetchType.EAGER)
     private List<Rent> rents = new ArrayList<>();
 

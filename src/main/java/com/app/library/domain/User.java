@@ -31,7 +31,7 @@ public class User {
     private LocalDate accountCreated;
 
     @OneToMany(targetEntity = Rent.class,
-    mappedBy = "userId",
+    mappedBy = "user",
     fetch = FetchType.EAGER)
     private List<Rent> rents = new ArrayList<>();
 }
