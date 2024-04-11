@@ -1,5 +1,6 @@
 package com.app.library.service;
 
+import com.app.library.domain.Title;
 import com.app.library.repository.TitleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,4 +10,6 @@ import org.springframework.stereotype.Service;
 public class TitleService {
 
     private final TitleRepository titleRepository;
+
+    private Title saveTitle(final Title title) {return titleRepository.save(title);}
 }
